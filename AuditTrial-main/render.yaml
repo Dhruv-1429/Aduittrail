@@ -1,9 +1,10 @@
-services:
+databases:
   # 1. PostgreSQL Database
-  - type: psql
-    name: auditcore-db
+  - name: auditcore-db
     plan: free
     region: oregon
+
+services:
 
   # 2. Java Spring Boot Service
   - type: web
