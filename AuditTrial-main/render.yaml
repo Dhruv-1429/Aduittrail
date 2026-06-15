@@ -11,7 +11,7 @@ services:
     env: docker
     region: oregon
     plan: free
-    rootDir: backend/springboot/auditSpringBoot
+    rootDir: AuditTrial-main/backend/springboot/auditSpringBoot
     envVars:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
@@ -32,7 +32,7 @@ services:
     env: node
     region: oregon
     plan: free
-    rootDir: backend/nodejs
+    rootDir: AuditTrial-main/backend/nodejs
     buildCommand: npm install
     startCommand: node server.js
     envVars:
@@ -49,7 +49,7 @@ services:
     env: python
     region: oregon
     plan: free
-    rootDir: backend/python
+    rootDir: AuditTrial-main/backend/python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -66,7 +66,7 @@ services:
     env: static
     region: oregon
     plan: free
-    rootDir: frontend/frontend
+    rootDir: AuditTrial-main/frontend/frontend
     buildCommand: npm install && npm run build
     publishPath: dist
     envVars:
