@@ -65,8 +65,6 @@ services:
   - type: web
     name: react-dashboard
     env: static
-    region: oregon
-    plan: free
     rootDir: AuditTrial-main/frontend/frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
